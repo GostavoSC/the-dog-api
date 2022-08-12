@@ -78,12 +78,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/components/TopAppBar.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/navigation/DogNavigation.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/screens/HomeScreen.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/view_model/HomeState.kt">
           <value>
             <set />
           </value>
@@ -128,7 +138,82 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/ui/theme/Color.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/ui/theme/Theme.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/themes.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Fabrica Carregamento/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Fabrica Carregamento/app/jacoco.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Fabrica Carregamento/app/src/main/java/hbsis/wms/fabrica/carregamento/produto_acabado/Processo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Fabrica Carregamento/azure-pipelines.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Fabrica Carregamento/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/core/domain/model/loading_tasks/LoadingTaskDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/core/presentation/compose/components/LoadingSwitch.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/core/presentation/compose/screens/TaskDetailsScreen.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/core/presentation/loading_details/LoadingDetailsViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/source/FinalizeResponseBody.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../WMS/WMS - Finished Product Loading/app/src/main/java/hbsis/wms/ambev/finishedProductLoading/source/remote/loading_tasks/LoadingTaskDetailsResponse.kt">
           <value>
             <set />
           </value>
