@@ -4,6 +4,6 @@ import gstv.dogapi.source.remote.BreedResponse
 import retrofit2.http.GET
 
 interface DogService {
-    @GET("/breeds")
+    @GET("breeds")
     suspend fun getBreeds(): List<BreedResponse>
 }

@@ -9,7 +9,7 @@ import okhttp3.Route
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://api.thedogapi.com/v1"
+const val BASE_URL = "https://api.thedogapi.com/v1/"
 const val HEADER = "x-api-key"
 const val API_KEY = "15637779-4734-476c-94b0-819e489b74ec"
 
