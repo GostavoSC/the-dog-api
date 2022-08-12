@@ -68,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/domain/DogImage.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/HomeScreen.kt">
           <value>
             <set />
@@ -113,6 +118,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/DogImage.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/DogRepository.kt">
           <value>
             <set />
@@ -133,7 +143,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/DogImageResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/mapper/BreedsResponseMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/mapper/DogImageResponseMapper.kt">
           <value>
             <set />
           </value>

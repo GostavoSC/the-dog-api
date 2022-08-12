@@ -34,7 +34,7 @@ class NetworkUtils {
 
 class DogApiAuthenticator : Authenticator {
     override fun authenticate(route: Route?, response: Response): Request? {
-        return response.request().newBuilder()
+        return response.request.newBuilder()
             .header(HEADER, API_KEY)
             .build()
     }

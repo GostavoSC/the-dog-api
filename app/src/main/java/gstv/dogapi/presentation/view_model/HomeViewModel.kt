@@ -33,4 +33,21 @@ class HomeViewModel(private val repository: DogRepository) : ViewModel() {
         }
     }
 
+    fun getRandomImages() {
+        viewModelScope.launch {
+            when (val result = repository.getRandomDogsImage(3)) {
+                is ResultWrapper.Success -> {
+                    _homeState.update {
+                        it.copy(
+                            images = result.value
+                        )
+                    }
+                }
+                else -> {
+                    //todo
+                }
+            }
+        }
+    }
+
 }
