@@ -47,7 +47,7 @@ fun Pager(images: List<DogImage>) {
     HorizontalPager(
         state = state,
         count = images.size, modifier = Modifier
-            .height(200.dp)
+            .height(400.dp)
             .fillMaxWidth()
     ) { page ->
         imageUrl.value = images[page].url
