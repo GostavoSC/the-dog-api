@@ -48,6 +48,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/core/utils/ChoicesEnum.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/core/utils/Mapper.kt">
           <value>
             <set />
@@ -68,6 +73,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/domain/Category.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/domain/DogImage.kt">
           <value>
             <set />
@@ -83,12 +93,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/components/Category.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/components/Dropdown.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/components/TopAppBar.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/navigation/DogNavigation.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/screens/DogDetailsScreen.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/presentation/screens/DogListScreen.kt">
           <value>
             <set />
           </value>
@@ -143,12 +173,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/CategoryResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/DogImageResponse.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/mapper/BreedsResponseMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/gstv/dogapi/source/remote/mapper/CategoryResponseMapper.kt">
           <value>
             <set />
           </value>

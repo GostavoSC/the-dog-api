@@ -1,6 +1,7 @@
 package gstv.dogapi.service
 
 import gstv.dogapi.source.remote.BreedResponse
+import gstv.dogapi.source.remote.CategoryResponse
 import gstv.dogapi.source.remote.DogImageResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -11,4 +12,7 @@ interface DogService {
 
     @GET("images/search")
     suspend fun getRandomDogsImage(@Query("limit") quantity: Int): List<DogImageResponse>
+
+    @GET("categories")
+    suspend fun getCategories(): List<CategoryResponse>
 }
