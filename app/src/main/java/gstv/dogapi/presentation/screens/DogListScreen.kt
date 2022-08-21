@@ -18,31 +18,35 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import gstv.dogapi.core.utils.ChoicesEnum
 import gstv.dogapi.domain.Breed
-import gstv.dogapi.domain.Category
 import gstv.dogapi.presentation.components.BaseScaffold
 import gstv.dogapi.presentation.components.BaseTopAppBar
-import gstv.dogapi.presentation.components.CategoryDropdown
 import gstv.dogapi.presentation.view_model.HomeViewModel
 
 @Composable
 fun DogListScreen(
     viewModel: HomeViewModel,
-    choicesEnum: ChoicesEnum?,
-    onItemClicked: (Breed) -> Unit
+    onItemClicked: (Breed) -> Unit,
+    onFavouritesClick: () -> Unit
 ) {
     LaunchedEffect(key1 = Unit) {
-        viewModel.getBreeds(choicesEnum = choicesEnum ?: ChoicesEnum.SEE_ALL)
+        viewModel.getBreeds(choicesEnum = ChoicesEnum.SEE_ALL)
     }
     val state = viewModel.homeState.collectAsState().value
 
-    BaseScaffold(topBar = { BaseTopAppBar(title = "Dog List") }) {
+    BaseScaffold(topBar = {
+        BaseTopAppBar(
+            title = "Dog List",
+            onClickButton = {
+                onFavouritesClick()
+            },
+        )
+    }) {
         DogListScreenContent(
             state.breeds,
-            categories = state.categories,
             onItemClicked = {
                 onItemClicked(it)
             },
-            onCategoryClicked = {})
+        )
     }
 }
 
@@ -50,24 +54,14 @@ fun DogListScreen(
 @Composable
 private fun DogListScreenContent(
     breeds: List<Breed>,
-    categories: List<Category>,
-    onCategoryClicked: (Category) -> Unit,
     onItemClicked: (Breed) -> Unit
 ) {
-    LazyColumn() {
-        item {
-            if (categories.isNotEmpty()) {
-                CategoryDropdown(
-                    suggestions = categories,
-                    onItemCLicked = {
-                        onCategoryClicked(it)
-                    }
-                )
-            }
-        }
+    LazyColumn(
+        modifier = Modifier.padding(12.dp)
+    ) {
         items(breeds) {
-            DogCard(breed = it) {
-                onItemClicked(it)
+            DogCard(breed = it) { breed ->
+                onItemClicked(breed)
             }
         }
     }
@@ -78,6 +72,7 @@ private fun DogListScreenContent(
 @Composable
 private fun DogCard(breed: Breed, onItemClicked: (Breed) -> Unit) {
     Card(
+        elevation = 2.dp,
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
@@ -89,17 +84,13 @@ private fun DogCard(breed: Breed, onItemClicked: (Breed) -> Unit) {
         Column(Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) {
             Text(
                 text = breed.name,
-                style = MaterialTheme.typography.h6,
+                style = MaterialTheme.typography.h5,
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = breed.origin ?: "",
-                style = MaterialTheme.typography.subtitle1,
-                fontWeight = FontWeight.Medium
-            )
-            Text(
                 text = breed.temperament ?: "",
-                style = MaterialTheme.typography.subtitle1,
+                style = MaterialTheme.typography.h6,
+                maxLines = 1,
                 fontWeight = FontWeight.Medium
             )
         }

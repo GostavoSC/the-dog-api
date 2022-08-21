@@ -2,11 +2,12 @@ package gstv.dogapi.source
 
 import gstv.dogapi.core.utils.ResultWrapper
 import gstv.dogapi.domain.Breed
-import gstv.dogapi.domain.Category
 import gstv.dogapi.domain.DogImage
+import gstv.dogapi.domain.FavouriteImage
 
 interface DogRepository {
     suspend fun getAllDogs(): ResultWrapper<List<Breed>>
-    suspend fun getRandomDogsImage(quantity: Int): ResultWrapper<List<DogImage>>
-    suspend fun getCategories(): ResultWrapper<List<Category>>
+    suspend fun getBreedImages(quantity: Int, breedId: String?): ResultWrapper<List<DogImage>>
+    suspend fun saveFavoriteImage(image: DogImage): ResultWrapper<Unit>
+    suspend fun getMyFavourites(): ResultWrapper<List<FavouriteImage>>
 }

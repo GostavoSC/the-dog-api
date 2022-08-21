@@ -23,36 +23,8 @@ class HomeViewModel(private val repository: DogRepository) : ViewModel() {
             ChoicesEnum.MY_FAVOURITES -> {
                 //coming soon
             }
-            ChoicesEnum.BY_CATEGORY -> {
-                getCategories()
-            }
             else -> {
                 getAllBreeds()
-            }
-        }
-    }
-
-    fun getBreedById(id: String) {
-        _homeState.update {
-            it.copy(
-                currentBreed = it.breeds.first { breed -> breed.id == id }
-            )
-        }
-    }
-
-    private fun getCategories() {
-        viewModelScope.launch {
-            when (val result = repository.getCategories()) {
-                is ResultWrapper.Success -> {
-                    _homeState.update {
-                        it.copy(
-                            categories = result.value
-                        )
-                    }
-                }
-                else -> {
-                    //todo
-                }
             }
         }
     }
@@ -74,9 +46,9 @@ class HomeViewModel(private val repository: DogRepository) : ViewModel() {
         }
     }
 
-    fun getRandomImages() {
+    fun getBreedImages() {
         viewModelScope.launch {
-            when (val result = repository.getRandomDogsImage(3)) {
+            when (val result = repository.getBreedImages(5, _homeState.value.currentBreed?.id)) {
                 is ResultWrapper.Success -> {
                     _homeState.update {
                         it.copy(
@@ -91,11 +63,44 @@ class HomeViewModel(private val repository: DogRepository) : ViewModel() {
         }
     }
 
+
+    fun favoriteImage() {
+        viewModelScope.launch {
+            when (val result = repository.saveFavoriteImage(
+                _homeState.value.images.first()
+            )) {
+                is ResultWrapper.Success -> {
+                    //do anything when is success
+                }
+                else -> {
+                    //todo
+                }
+            }
+        }
+    }
+
     fun updateCurrentBreed(breed: Breed) {
         _homeState.update {
             it.copy(
                 currentBreed = breed
             )
+        }
+    }
+
+    fun getMyFavourites() {
+        viewModelScope.launch {
+            when (val result = repository.getMyFavourites()) {
+                is ResultWrapper.Success -> {
+                    _homeState.update {
+                        it.copy(
+                            favouriteImages = result.value
+                        )
+                    }
+                }
+                else -> {
+                    //todo
+                }
+            }
         }
     }
 
