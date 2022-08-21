@@ -1,0 +1,32 @@
+tasks.register('first') {
+    doLast {
+        String myName = 'Gustavo Stelle Cunha'
+        println "My name is $myName"
+    }
+}
+
+tasks.register('count') {
+    doLast {
+        4.times { println "$it" }
+    }
+}
+
+tasks.register('intro') {
+    dependsOn tasks.first
+    dependsOn tasks.count
+    doLast {
+        println "Thats is today"
+    }
+}
+
+7.times { counter ->
+    tasks.register("task$counter") { count ->
+        doLast {
+            println "I'm task number $count"
+        }
+    }
+}
+
+tasks.named('task0'){
+    dependsOn('task2','task3','task4','task5','task6')
+}
